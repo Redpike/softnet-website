@@ -1,21 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import MainTemplate from "../templates/MainTemplate/MainTemplate";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
+};
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  <MainTemplate>
+      <h1 style={style}>Strona w budowie</h1>
+  </MainTemplate>
+);
 
-export default IndexPage
+export default IndexPage;
