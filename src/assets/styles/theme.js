@@ -15,4 +15,9 @@ export const theme = {
             xxl: '9.4rem',
         },
     },
+    mq: {
+        huge: `@media (min-width: 1440px;)`,
+        desktop: `@media (min-width: 1024px)`,
+        tablet: `@media (mix-width: 768px)`
+    }
 };

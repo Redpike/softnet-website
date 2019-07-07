@@ -4,6 +4,7 @@ import {ThemeProvider} from "styled-components";
 import PropTypes from "prop-types";
 import {theme} from "../../assets/styles/theme";
 import GlobalStyle from "../../assets/styles/GlobalStyle";
+import Header from "../../components/Header/Header";
 
 const MainTemplate = ({children}) => (
     <>
@@ -11,6 +12,7 @@ const MainTemplate = ({children}) => (
         <GlobalStyle />
         <ThemeProvider theme={theme}>
             <>
+                <Header />
                 {children}
             </>
         </ThemeProvider>
