@@ -26,6 +26,17 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-drupal',
+      options: {
+        baseUrl: 'http://localhost:8083/',
+        apiBase: 'api', // endpoint of Drupal server
+        links: {
+          // Job Offers
+          jobOffers: 'http://localhost:8083/api/node/job_offers'
+        }
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
