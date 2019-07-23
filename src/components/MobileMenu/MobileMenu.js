@@ -34,7 +34,9 @@ const MobileMenuLinksWrapper = styled.ul`
 const MenuLink = styled.li`
     margin: 20px 0;
     list-style: none;
+    font-family: ${({ theme }) => theme.font.family.darkerGrotesque};
     font-weight: bold;
+    font-size: ${({ theme }) => theme.font.size.s};
     opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
     transition: opacity .25s .2s ease-in-out;
 `;

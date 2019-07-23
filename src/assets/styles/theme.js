@@ -14,6 +14,10 @@ export const theme = {
             xl: '7.2rem',
             xxl: '9.4rem',
         },
+        family: {
+            montserrat: '"Montserrat Regular", sans-serif',
+            darkerGrotesque: '"DarkerGrotesque Bold", sans-serif'
+        }
     },
     mq: {
         huge: `@media (min-width: 1440px;)`,
