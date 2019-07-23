@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { Link } from "gatsby";
 import Hamburger from "../Hamburger/Hamburger";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const HeaderWrapper = styled.nav`
     padding: 35px;
@@ -46,6 +47,7 @@ const Header = () => {
         <HeaderWrapper>
             <Link to="/"><HeaderLogo /></Link>
             <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+            <MobileMenu isOpen={isMenuOpen} />
         </HeaderWrapper>
     );
 };
