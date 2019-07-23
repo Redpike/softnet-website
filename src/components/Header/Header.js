@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { Link } from "gatsby";
+import Hamburger from "../Hamburger/Hamburger";
 
 const HeaderWrapper = styled.nav`
     padding: 35px;
@@ -18,21 +19,33 @@ const HeaderWrapper = styled.nav`
 const HeaderLogo = styled(Logo)`
     position: relative;
     z-index: 9999;
-    width: 90px;
+    width: 35px;
 
     img {
-        width: 90px;
+        width: 35px;
         height: auto;
+    }
+
+    ${({ theme }) => theme.mq.desktop} {
+        width: 55px;
+
+        img {
+            width: 55px;
+        }
     }
 `;
 
 const Header = () => {
+    const [isMenuOpen, setMenuState] = useState(false);
+    
+    const toggleMobileMenu = () => {
+        setMenuState(!isMenuOpen);
+    };
+
     return (
         <HeaderWrapper>
             <Link to="/"><HeaderLogo /></Link>
-            <div>
-                header
-            </div>
+            <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
         </HeaderWrapper>
     );
 };
