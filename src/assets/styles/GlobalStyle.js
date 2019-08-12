@@ -13,12 +13,17 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         margin: 0;
-        font-family: 'Montserrat Regular', sans-serif;
+        font-family: 'Montserrat-Regular', sans-serif;
         font-size: 1.6rem;
     }
 
     h1, h2, h3, h4, h5 {
-        font-family: 'DarkerGrotesque Bold', sans-serif;
+        font-family: 'DarkerGrotesque-Bold', sans-serif;
+        font-weight: normal;
+    }
+
+    h1 {
+        font-size: 4.8rem;
     }
 `;
 
