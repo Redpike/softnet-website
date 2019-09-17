@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import menuItems from '../../shared/MenuItems';
 
 const MobileMenuWrapper = styled.div`
     position: fixed;
@@ -40,12 +41,6 @@ const MenuLink = styled.li`
     opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
     transition: opacity .25s .2s ease-in-out;
 `;
-
-const menuItems = [
-    'Home',
-    'SoftNet',
-    'Praca'
-];
 
 const MobileMenu = ({ isOpen }) => (
     <MobileMenuWrapper isOpen={isOpen}>

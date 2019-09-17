@@ -4,6 +4,7 @@ import Logo from "../Logo/Logo";
 import { Link } from "gatsby";
 import Hamburger from "../Hamburger/Hamburger";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import DesktopMenu from "../DesktopMenu/DesktopMenu";
 
 const HeaderWrapper = styled.nav`
     padding: 35px;
@@ -38,7 +39,7 @@ const HeaderLogo = styled(Logo)`
 
 const Header = () => {
     const [isMenuOpen, setMenuState] = useState(false);
-    
+
     const toggleMobileMenu = () => {
         setMenuState(!isMenuOpen);
     };
@@ -46,6 +47,7 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <Link to="/"><HeaderLogo /></Link>
+            <DesktopMenu />
             <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
             <MobileMenu isOpen={isMenuOpen} />
         </HeaderWrapper>

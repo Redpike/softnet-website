@@ -21,7 +21,8 @@ export const theme = {
     },
     mq: {
         huge: `@media (min-width: 1440px;)`,
+        desktop_lt: `@media (max-width: 1023px)`,
         desktop: `@media (min-width: 1024px)`,
-        tablet: `@media (mix-width: 768px)`
+        tablet: `@media (min-width: 768px)`
     }
 };
