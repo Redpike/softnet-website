@@ -4,6 +4,12 @@ import slider1 from '../../assets/images/slider1.jpg';
 
 const ImageSliderWrapper = styled.div`
     width: 100vw;
+`;
+
+const ImageSliderInnerWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     background-image: url(${slider1});
     background-size: 100%;
     backgroud-position: 50% 50%;
@@ -25,14 +31,16 @@ const ImageSliderH3Text = styled.h3`
 
 const FrontSlider = () => (
     <ImageSliderWrapper>
-        <ImageSliderTextWrapper>
-            <ImageSliderH2Text>
-                Lorem ipsum
+        <ImageSliderInnerWrapper>
+            <ImageSliderTextWrapper>
+                <ImageSliderH2Text>
+                    Lorem ipsum
             </ImageSliderH2Text>
-            <ImageSliderH3Text>
-                Neque porro quisquam est qui dolorem ipsum quia
+                <ImageSliderH3Text>
+                    Neque porro quisquam est qui dolorem ipsum quia
             </ImageSliderH3Text>
-        </ImageSliderTextWrapper>
+            </ImageSliderTextWrapper>
+        </ImageSliderInnerWrapper>
     </ImageSliderWrapper>
 );
 
