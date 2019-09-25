@@ -7,39 +7,54 @@ const ImageSliderWrapper = styled.div`
 `;
 
 const ImageSliderInnerWrapper = styled.div`
+    width: 100%;
+    height: 70vh;
+    background: url(${slider1}) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+`;
+
+const ImageSliderDarkMask = styled.div`
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
     width: 100%;
-    background-image: url(${slider1});
-    background-size: 100%;
-    backgroud-position: 50% 50%;
-    background-repeat: no-repeat;
-    padding-bottom: 32.5%;
+    height: 100%;
+    background: rgba(22, 22, 22, .35);
 `;
 
 const ImageSliderTextWrapper = styled.div`
+    width: 80%;
+    margin: 0 auto 30px;
 
+    ${({ theme }) => theme.mq.desktop} {
+        margin: 0 auto 60px;
+    }
 `;
 
 const ImageSliderH2Text = styled.h2`
-
+    color: #FFF;
 `;
 
 const ImageSliderH3Text = styled.h3`
-
+    color: #FFF;
 `;
 
 const FrontSlider = () => (
     <ImageSliderWrapper>
         <ImageSliderInnerWrapper>
-            <ImageSliderTextWrapper>
-                <ImageSliderH2Text>
-                    Lorem ipsum
-            </ImageSliderH2Text>
-                <ImageSliderH3Text>
-                    Neque porro quisquam est qui dolorem ipsum quia
-            </ImageSliderH3Text>
-            </ImageSliderTextWrapper>
+            <ImageSliderDarkMask>
+                <ImageSliderTextWrapper>
+                    <ImageSliderH2Text>
+                        Lorem ipsum
+                    </ImageSliderH2Text>
+                    <ImageSliderH3Text>
+                        Neque porro quisquam est qui dolorem ipsum quia
+                    </ImageSliderH3Text>
+                </ImageSliderTextWrapper>
+            </ImageSliderDarkMask>
         </ImageSliderInnerWrapper>
     </ImageSliderWrapper>
 );

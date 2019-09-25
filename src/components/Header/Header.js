@@ -12,10 +12,14 @@ const HeaderWrapper = styled.nav`
     top: 0;
     display: flex;
     width: 100%;
-    padding: 35px;
+    padding: 10px 35px;
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
+
+    ${({ theme }) => theme.mq.desktop} {
+        padding: 35px;
+    }
 `;
 
 const HeaderLogo = styled(Logo)`
