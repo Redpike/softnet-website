@@ -7,12 +7,12 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 import DesktopMenu from "../DesktopMenu/DesktopMenu";
 
 const HeaderWrapper = styled.nav`
-    padding: 35px;
-    display: flex;
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
+    display: flex;
     width: 100%;
+    padding: 35px;
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
