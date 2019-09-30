@@ -18,7 +18,7 @@ const HeaderWrapper = styled.nav`
     z-index: 9999;
 
     ${({ theme }) => theme.mq.desktop} {
-        padding: 35px;
+        padding: 20px 35px;
     }
 `;
 

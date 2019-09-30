@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import slider1 from '../../assets/images/slider1.jpg';
 
 const ImageSliderWrapper = styled.div`
-    width: 100vw;
+    width: 100%;
 `;
 
 const ImageSliderInnerWrapper = styled.div`
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background: url(${slider1}) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
