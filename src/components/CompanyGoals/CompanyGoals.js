@@ -1,7 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import companyGoalItems from '../../shared/CompanyGoalItems';
 import Icon from '../Icon/Icon';
+import companyGoalItems from '../../shared/CompanyGoalItems';
+
+const CompanyGoalsWrapper = styled.div`
+    max-width: 1100px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 150px 0;
+`;
+
+const CompanyGoalsHeaderWrapper = styled.div`
+    text-align: center;
+`;
+
+const CompanyGoalsHeader = styled.div`
+
+`;
+
+const CompanyGoalsSubheader = styled.div`
+
+`;
 
 const GoalItem = styled.div`
     flex: 1 0 30%;
@@ -45,7 +64,7 @@ const GoalItemBody = styled.div`
 const GoalItemsWrapper = styled.div`
     max-width: 1100px;
     width: 95%;
-    margin: 100px auto;
+    margin: 100px auto 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -56,21 +75,31 @@ const GoalItemsWrapper = styled.div`
 `;
 
 const CompanyGoals = () => (
-    <GoalItemsWrapper>
-        {companyGoalItems.map(element => (
-            <GoalItem key={element.id}>
-                <GoalItemIcon>
-                    <Icon src={element.icon} />
-                </GoalItemIcon>
-                <GoalItemTitle>
-                    {element.title}
-                </GoalItemTitle>
-                <GoalItemBody>
-                    {element.body}
-                </GoalItemBody>
-            </GoalItem>
-        ))}
-    </GoalItemsWrapper>
+    <CompanyGoalsWrapper>
+        <CompanyGoalsHeaderWrapper>
+            <CompanyGoalsHeader>
+                Systemy projektowane dla Twojego biznesu
+            </CompanyGoalsHeader>
+            <CompanyGoalsSubheader>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a sodales quam.
+            </CompanyGoalsSubheader>
+        </CompanyGoalsHeaderWrapper>
+        <GoalItemsWrapper>
+            {companyGoalItems.map(element => (
+                <GoalItem key={element.id}>
+                    <GoalItemIcon>
+                        <Icon src={element.icon} />
+                    </GoalItemIcon>
+                    <GoalItemTitle>
+                        {element.title}
+                    </GoalItemTitle>
+                    <GoalItemBody>
+                        {element.body}
+                    </GoalItemBody>
+                </GoalItem>
+            ))}
+        </GoalItemsWrapper>
+    </CompanyGoalsWrapper>
 );
 
 export default CompanyGoals;
