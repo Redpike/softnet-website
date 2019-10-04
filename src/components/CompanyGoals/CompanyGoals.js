@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import companyGoalItems from '../../shared/CompanyGoalItems';
+import Icon from '../Icon/Icon';
 
 const GoalItem = styled.div`
     flex: 1 0 30%;
@@ -8,28 +9,37 @@ const GoalItem = styled.div`
     text-align: center;
 
     > div {
-        margin: 30px 0;
+        margin: 40px 0;
     }
 
     > div:first-child {
-        margin: 0 0 30px;
+        margin: 0;
     }
 
     > div:last-child {
-        margin: 30px 0 0;
+        margin: 0;
     }
 `;
 
 const GoalItemIcon = styled.figure`
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 40px;
 
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 const GoalItemTitle = styled.div`
-
+    font-family: ${({ theme }) => theme.font.family.montserrat};
+    font-size: 2.2rem;
 `;
 
 const GoalItemBody = styled.div`
-
+    font-family: ${({ theme }) => theme.font.family.montserrat};
+    font-size: 1.4rem;
 `;
 
 const GoalItemsWrapper = styled.div`
@@ -49,9 +59,9 @@ const CompanyGoals = () => (
     <GoalItemsWrapper>
         {companyGoalItems.map(element => (
             <GoalItem key={element.id}>
-                {/* <GoalItemIcon>
-                    
-                </GoalItemIcon> */}
+                <GoalItemIcon>
+                    <Icon src={element.icon} />
+                </GoalItemIcon>
                 <GoalItemTitle>
                     {element.title}
                 </GoalItemTitle>
