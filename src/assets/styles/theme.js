@@ -15,8 +15,9 @@ export const theme = {
             xxl: '9.4rem',
         },
         family: {
-            montserrat: '"Montserrat Regular", sans-serif',
-            darkerGrotesque: '"DarkerGrotesque Bold", sans-serif'
+            // TODO repair fonts
+            montserrat: '"Montserrat-Regular", sans-serif',
+            darkerGrotesque: '"DarkerGrotesque-Bold", sans-serif'
         }
     },
     mq: {
