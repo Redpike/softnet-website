@@ -6,7 +6,7 @@ import Support from "../components/Support/Support";
 
 const IndexPage = () => (
   <>
-    <MainTemplate>
+    <MainTemplate seoTitle='Strona główna'>
       <FrontSlider />
       <CompanyGoals />
       <Support />

@@ -6,9 +6,9 @@ import {theme} from "../../assets/styles/theme";
 import GlobalStyle from "../../assets/styles/GlobalStyle";
 import Header from "../../components/Header/Header";
 
-const MainTemplate = ({children}) => (
+const MainTemplate = ({seoTitle, children}) => (
     <>
-        <SEO/>
+        <SEO title={seoTitle}/>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
             <>
@@ -19,7 +19,12 @@ const MainTemplate = ({children}) => (
     </>
 );
 
+MainTemplate.defaultProps = {
+    seoTitle: ''
+}
+
 MainTemplate.propTypes = {
+    seoTitle: PropTypes.string,
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node,
