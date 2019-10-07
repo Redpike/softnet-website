@@ -5,7 +5,7 @@ import linkedinIcon from '../../assets/images/social-media/linkedin.png';
 import SocialMediaIcon from '../SocialMediaIcon/SocialMediaIcon';
 
 const FooterWrapper = styled.footer`
-    padding: 100px 0;
+    padding: 80px 0;
 `;
 
 const FooterInnerWrapper = styled.div`
@@ -19,13 +19,27 @@ const CompanyDataWrapper = styled.div`
 `;
 
 const CompanyDataInnerWrapper = styled.div`
+    margin-bottom: 30px;
+
     h3, h4 {
+        display: block;
         margin: 0;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        line-height: 2.8rem;
     }
 `;
 
 const SocialMediaWrapper = styled.div`
 
+    > button:first-child {
+        margin-right: 10px;
+    }
 `;
 
 const FooterMenuWrapper = styled.div`

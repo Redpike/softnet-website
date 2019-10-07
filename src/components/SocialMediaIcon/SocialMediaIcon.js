@@ -8,7 +8,7 @@ const SocialMediaButton = styled.button`
     outline: 0 none;
     cursor: pointer;
     transform: translateY(0);
-    transition: transform .3s ease-in;
+    transition: transform .2s ease-in;
 
     img {
         width: 40px;
@@ -23,7 +23,7 @@ const SocialMediaButton = styled.button`
 
 const SocialMediaIcon = ({src}) => (
     <SocialMediaButton>
-        <img src={src}></img>
+        <img src={src} alt=""></img>
     </SocialMediaButton>
 );
 
