@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import facebookIcon from '../../assets/images/social-media/facebook.png';
 import linkedinIcon from '../../assets/images/social-media/linkedin.png';
 import SocialMediaIcon from '../SocialMediaIcon/SocialMediaIcon';
+import secondaryMenuItems from '../../shared/SecondaryMenuItems';
 
 const FooterWrapper = styled.footer`
     padding: 80px 0;
@@ -67,7 +68,23 @@ const Footer = () => (
                 </SocialMediaWrapper>
             </CompanyDataWrapper>
             <FooterMenuWrapper>
-
+                {secondaryMenuItems.map(element => {
+                // TODO Refactor to style-components
+                if (element.links) {
+                        return (
+                            <>
+                                <div className='secondary-menu__header'>
+                                    <h4>{element.header}</h4>
+                                </div>
+                                <div className='secondary-menu__links'>
+                                    {element.links.map(link => (
+                                        <div>{link.caption}</div>
+                                    ))}
+                                </div>
+                            </>
+                        );
+                    }
+                })}
             </FooterMenuWrapper>
         </FooterInnerWrapper>
     </FooterWrapper>
