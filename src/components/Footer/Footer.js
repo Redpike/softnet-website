@@ -36,7 +36,7 @@ const CompanyDataWrapper = styled.div`
     ${({ theme }) => theme.mq.desktop_lt} {
         background: rgba(128, 0, 12, 1) no-repeat center;
         color: #F3F3F3;
-        padding: 50px 0;
+        padding: 50px 0 25px;
         text-align: center;
     }
 `;

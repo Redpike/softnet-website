@@ -26,7 +26,8 @@ const ImageSliderDarkMask = styled.div`
 `;
 
 const ImageSliderTextWrapper = styled.div`
-    width: 80%;
+    max-width: 1100px;
+    width: 95%;
     margin: 0 auto 30px;
 
     ${({ theme }) => theme.mq.desktop} {

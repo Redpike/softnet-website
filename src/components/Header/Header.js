@@ -10,18 +10,24 @@ const HeaderWrapper = styled.nav`
     position: sticky;
     left: 0;
     top: 0;
-    display: flex;
     background: rgba(255, 255, 255, 1) no-repeat center;
     box-shadow: 0 4px 10px 1px rgba(0,0,0,.1);
     width: 100%;
-    padding: 10px 35px;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 20px;
     z-index: 9999;
 
     ${({ theme }) => theme.mq.desktop} {
-        padding: 20px 35px;
+        padding: 20px;
     }
+`;
+
+const HeaderInnerWrapper = styled.div`
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 const HeaderLogo = styled(Logo)`
@@ -52,10 +58,12 @@ const Header = () => {
 
     return (
         <HeaderWrapper>
-            <Link to="/"><HeaderLogo /></Link>
-            <DesktopMenu />
-            <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
-            <MobileMenu isOpen={isMenuOpen} />
+            <HeaderInnerWrapper>
+                <Link to="/"><HeaderLogo /></Link>
+                <DesktopMenu />
+                <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+                <MobileMenu isOpen={isMenuOpen} />
+            </HeaderInnerWrapper>
         </HeaderWrapper>
     );
 };
