@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import facebookIcon from '../../assets/images/social-media/facebook.png';
+import facebookWhiteIcon from '../../assets/images/social-media/facebook_white.png';
 import linkedinIcon from '../../assets/images/social-media/linkedin.png';
+import linkedinWhiteIcon from '../../assets/images/social-media/linkedin_white.png';
 import SocialMediaIcon from '../SocialMediaIcon/SocialMediaIcon';
 import SecondaryMenu from '../SecondaryMenu/SecondaryMenu';
 
@@ -12,7 +14,7 @@ const FooterSpacer = styled.div`
 const FooterWrapper = styled.footer`
     padding: 80px 0 40px;
 
-    ${({theme}) => theme.mq.desktop_lt} {
+    ${({ theme }) => theme.mq.desktop_lt} {
         padding: 80px 0 0;
     }
 `;
@@ -24,14 +26,14 @@ const FooterInnerWrapper = styled.div`
     display: flex;
     flex-direction: row;
 
-    ${({theme}) => theme.mq.desktop_lt} {
+    ${({ theme }) => theme.mq.desktop_lt} {
         flex-direction: column-reverse;
         width: 100%;
     }
 `;
 
 const CompanyDataWrapper = styled.div`
-    ${({theme}) => theme.mq.desktop_lt} {
+    ${({ theme }) => theme.mq.desktop_lt} {
         background: rgba(128, 0, 12, 1) no-repeat center;
         color: #F3F3F3;
         padding: 50px 0;
@@ -57,6 +59,21 @@ const CompanyDataInnerWrapper = styled.div`
 `;
 
 const SocialMediaWrapper = styled.div`
+    ${({ theme }) => theme.mq.desktop_lt} {
+        display: none;
+    }
+
+    > button:first-child {
+        margin-right: 10px;
+    }
+`;
+
+const SocialMediaMobileWrapper = styled.div`
+    display: none;
+
+    ${({ theme }) => theme.mq.desktop_lt} {
+        display: block;
+    }
 
     > button:first-child {
         margin-right: 10px;
@@ -64,7 +81,7 @@ const SocialMediaWrapper = styled.div`
 `;
 
 const FooterMenuWrapper = styled.div`
-    ${({theme}) => theme.mq.desktop_lt} {
+    ${({ theme }) => theme.mq.desktop_lt} {
         margin-bottom: 80px;
     }
 `;
@@ -88,6 +105,10 @@ const Footer = () => (
                     <SocialMediaIcon src={facebookIcon} />
                     <SocialMediaIcon src={linkedinIcon} />
                 </SocialMediaWrapper>
+                <SocialMediaMobileWrapper>
+                    <SocialMediaIcon src={facebookWhiteIcon} />
+                    <SocialMediaIcon src={linkedinWhiteIcon} />
+                </SocialMediaMobileWrapper>
             </CompanyDataWrapper>
             <FooterSpacer />
             <FooterMenuWrapper>
