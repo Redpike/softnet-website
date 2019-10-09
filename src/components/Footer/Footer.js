@@ -3,20 +3,40 @@ import styled from 'styled-components';
 import facebookIcon from '../../assets/images/social-media/facebook.png';
 import linkedinIcon from '../../assets/images/social-media/linkedin.png';
 import SocialMediaIcon from '../SocialMediaIcon/SocialMediaIcon';
-import secondaryMenuItems from '../../shared/SecondaryMenuItems';
+import SecondaryMenu from '../SecondaryMenu/SecondaryMenu';
+
+const FooterSpacer = styled.div`
+    flex-grow: 1;
+`;
 
 const FooterWrapper = styled.footer`
-    padding: 80px 0;
+    padding: 80px 0 40px;
+
+    ${({theme}) => theme.mq.desktop_lt} {
+        padding: 80px 0 0;
+    }
 `;
 
 const FooterInnerWrapper = styled.div`
     max-width: 1100px;
     width: 95%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+    ${({theme}) => theme.mq.desktop_lt} {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
 `;
 
 const CompanyDataWrapper = styled.div`
-
+    ${({theme}) => theme.mq.desktop_lt} {
+        background: rgba(128, 0, 12, 1) no-repeat center;
+        color: #F3F3F3;
+        padding: 50px 0;
+        text-align: center;
+    }
 `;
 
 const CompanyDataInnerWrapper = styled.div`
@@ -44,7 +64,9 @@ const SocialMediaWrapper = styled.div`
 `;
 
 const FooterMenuWrapper = styled.div`
-
+    ${({theme}) => theme.mq.desktop_lt} {
+        margin-bottom: 80px;
+    }
 `;
 
 const Footer = () => (
@@ -67,24 +89,9 @@ const Footer = () => (
                     <SocialMediaIcon src={linkedinIcon} />
                 </SocialMediaWrapper>
             </CompanyDataWrapper>
+            <FooterSpacer />
             <FooterMenuWrapper>
-                {secondaryMenuItems.map(element => {
-                // TODO Refactor to style-components
-                if (element.links) {
-                        return (
-                            <>
-                                <div className='secondary-menu__header'>
-                                    <h4>{element.header}</h4>
-                                </div>
-                                <div className='secondary-menu__links'>
-                                    {element.links.map(link => (
-                                        <div>{link.caption}</div>
-                                    ))}
-                                </div>
-                            </>
-                        );
-                    }
-                })}
+                <SecondaryMenu />
             </FooterMenuWrapper>
         </FooterInnerWrapper>
     </FooterWrapper>

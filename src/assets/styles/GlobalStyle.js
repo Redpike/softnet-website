@@ -33,6 +33,10 @@ const GlobalStyle = createGlobalStyle`
     h3 {
         font-size: 2.8rem;
     }
+
+    h5 {
+        font-size: 1.4rem;
+    }
 `;
 
 export default GlobalStyle;

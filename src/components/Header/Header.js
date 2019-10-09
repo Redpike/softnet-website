@@ -11,6 +11,8 @@ const HeaderWrapper = styled.nav`
     left: 0;
     top: 0;
     display: flex;
+    background: rgba(255, 255, 255, 1) no-repeat center;
+    box-shadow: 0 4px 10px 1px rgba(0,0,0,.1);
     width: 100%;
     padding: 10px 35px;
     justify-content: space-between;
